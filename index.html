@@ -3,93 +3,59 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Atari Terror — Nová deska</title>
-  <meta name="description" content="Atari Terror — nová deska. Připravujeme nový materiál.">
+  <title>Atari Terror — Nová deska & koncerty</title>
+  <meta name="description" content="Atari Terror. Nová deska — coming soon. Přehled koncertů na podzim a v zimě 2026.">
   <meta property="og:title" content="Atari Terror — Nová deska">
-  <meta property="og:description" content="Atari Terror. Nová deska. Coming soon.">
+  <meta property="og:description" content="Atari Terror. Nová deska. Coming soon. Koncerty 2026.">
   <meta property="og:type" content="website">
-  <link rel="icon" href="assets/images/atari-terror-believer.png">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main>
+  <main class="poster">
     <header class="topbar">
-      <div class="brand-small">ATARI TERROR</div>
-      <div class="socials" aria-label="Sociální sítě">
-        <a href="https://www.instagram.com/atari_terror_oficialni/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-          <span class="icon instagram" aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <nav class="socials" aria-label="Sociální sítě">
+        <a href="https://www.instagram.com/atari_terror_oficialni/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Atari Terror">
+          <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle class="dot" cx="18" cy="6" r="1"/></svg>
         </a>
-        <a href="https://www.facebook.com/atariterror/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-          <span class="icon facebook" aria-hidden="true">f</span>
+        <a href="https://www.facebook.com/atariterror/" target="_blank" rel="noopener noreferrer" aria-label="Facebook Atari Terror">
+          <svg class="social-icon facebook-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.2 21v-8h2.7l.4-3.2h-3.1v-2c0-.9.3-1.5 1.6-1.5h1.7V3.4c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.2H8v3.2h2.8v8z"/></svg>
         </a>
-      </div>
+      </nav>
     </header>
 
-    <section class="hero" aria-label="Atari Terror">
-      <div class="hero-title">ATARI<br>TERROR</div>
-
-      <div class="hero-art">
-        <img src="assets/images/atari-terror-believer.png"
-             alt="Atari Terror — Believe"
-             loading="eager">
+    <section class="hero" id="top" aria-label="Atari Terror">
+      <img class="band-logo" src="assets/images/atari-terror-logo.png" alt="Atari Terror">
+      <div class="mascot-wrap">
+        <img class="mascot" src="assets/images/atari-terror-mascot.png" alt="Zelený punkový maskot Atari Terror">
       </div>
-
-      <div class="grunge grunge-a"></div>
-      <div class="grunge grunge-b"></div>
     </section>
 
-    <section class="album">
+    <section class="album" aria-labelledby="album-title">
       <div class="album-copy">
-        <h1>NOVÁ DESKA</h1>
+        <h1 id="album-title">NOVÁ DESKA</h1>
         <div class="coming">COMING SOON</div>
       </div>
-      <div class="texture-block" aria-hidden="true">
-        <span></span><span></span><span></span><span></span>
-      </div>
+      <div class="album-mark" aria-hidden="true"></div>
     </section>
 
-    <section class="concerts">
-      <div class="section-heading">
-        <h2>KONCERTY</h2>
-        <span></span>
-      </div>
-
+    <section class="concerts" aria-labelledby="concert-title">
+      <div class="section-heading"><h2 id="concert-title">KONCERTY</h2><span>PODZIM / ZIMA 2026</span></div>
       <div class="concert-list">
-        <div class="concert">
-          <time datetime="2026-10-24">24. 10. 2026</time>
-          <strong>PRAHA</strong>
-          <span>SaSaZu</span>
-        </div>
-        <div class="concert">
-          <time datetime="2026-11-14">14. 11. 2026</time>
-          <strong>ČESKÉ BUDĚJOVICE</strong>
-          <span>MC Fabrika</span>
-        </div>
-        <div class="concert">
-          <time datetime="2026-11-27">27. 11. 2026</time>
-          <strong>PLZEŇ</strong>
-          <span>Divadlo Pod lampou</span>
-        </div>
-        <div class="concert">
-          <time datetime="2026-12-03">03. 12. 2026</time>
-          <strong>BRNO</strong>
-          <span>Fléda</span>
-        </div>
-        <div class="concert">
-          <time datetime="2026-12-04">04. 12. 2026</time>
-          <strong>SVITAVY</strong>
-          <span>Tyjátr</span>
-        </div>
+        <article class="concert"><time datetime="2026-10-24">24.10.2026</time><strong>PRAHA</strong><span>Clawfinger · SaSaZu</span></article>
+        <article class="concert"><time datetime="2026-11-06">06.11.2026</time><strong>DĚČÍN</strong><span>Le Garage Noir</span></article>
+        <article class="concert"><time datetime="2026-11-07">07.11.2026</time><strong>JABLONEC NAD NISOU</strong><span>Klub Stage</span></article>
+        <article class="concert"><time datetime="2026-11-14">14.11.2026</time><strong>ČESKÉ BUDĚJOVICE</strong><span>MC Fabrika</span></article>
+        <article class="concert"><time datetime="2026-11-20">20.11.2026</time><strong>MLADÁ BOLESLAV</strong><span>Malý sál DK</span></article>
+        <article class="concert"><time datetime="2026-11-21">21.11.2026</time><strong>PARDUBICE</strong><span>Žlutý pes</span></article>
+        <article class="concert"><time datetime="2026-11-27">27.11.2026</time><strong>PLZEŇ</strong><span>Divadlo Pod lampou</span></article>
+        <article class="concert"><time datetime="2026-11-28">28.11.2026</time><strong>MARIÁNSKÉ LÁZNĚ</strong><span>Klub Na Dvorku</span></article>
+        <article class="concert"><time datetime="2026-12-03">03.12.2026</time><strong>BRNO</strong><span>Fléda</span></article>
+        <article class="concert"><time datetime="2026-12-04">04.12.2026</time><strong>SVITAVY</strong><span>Tyjátr</span></article>
       </div>
     </section>
 
-    <footer>
-      <span>© 2026 ATARI TERROR</span>
-      <div>
-        <a href="https://www.instagram.com/atari_terror_oficialni/" target="_blank" rel="noopener noreferrer">INSTAGRAM</a>
-        <a href="https://www.facebook.com/atariterror/" target="_blank" rel="noopener noreferrer">FACEBOOK</a>
-      </div>
-    </footer>
+    <footer><span>© 2026 ATARI TERROR</span><div><a href="https://www.instagram.com/atari_terror_oficialni/" target="_blank" rel="noopener noreferrer">INSTAGRAM</a><a href="https://www.facebook.com/atariterror/" target="_blank" rel="noopener noreferrer">FACEBOOK</a></div></footer>
   </main>
 </body>
 </html>

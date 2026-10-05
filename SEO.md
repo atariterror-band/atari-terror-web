@@ -46,7 +46,7 @@ Atari Terror – česká rocková kapela. Hudba, koncerty, videa, merch a aktuá
 ### Canonical
 
 ```text
-https://www.atariterror.cz/
+https://www.atariterror.com/
 ```
 
 > Produkční doména musí být potvrzena před nasazením.
@@ -204,7 +204,7 @@ Homepage:
 og:type = website
 og:title = Atari Terror – česká rocková kapela
 og:description = Hudba, koncerty, videa, merch a aktuální informace.
-og:url = https://www.atariterror.cz/
+og:url = https://www.atariterror.com/
 ```
 
 Výchozí obrázek:
@@ -314,7 +314,7 @@ Allow: /
 Sitemap:
 
 ```text
-Sitemap: https://www.atariterror.cz/sitemap.xml
+Sitemap: https://www.atariterror.com/sitemap.xml
 ```
 
 URL domény musí být před produkcí potvrzena.

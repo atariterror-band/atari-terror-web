@@ -229,7 +229,7 @@ GitHub repository
         ↓
   vlastní doména
         ↓
-  atariterror.cz
+  atariterror.com
 ```
 
 V GitHubu nastavit:
@@ -252,8 +252,8 @@ Produkční doména musí být definována v GitHub Pages a následně propojena
 Po nasazení ověřit:
 
 ```text
-https://www.atariterror.cz
-https://atariterror.cz
+https://www.atariterror.com
+https://atariterror.com
 ```
 
 Podle zvoleného canonical nastavení má být jedna varianta primární a druhá na ni správně přesměrována nebo standardizována.

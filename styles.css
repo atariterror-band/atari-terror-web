@@ -5,6 +5,8 @@
   --green: #22bd37;
   --blue: #123d79;
   --muted: rgba(0, 0, 0, .68);
+  --visual-gap: 90px;
+  --artwork-blank-edge: clamp(32px, calc(4.25vw - 5px), 58px);
   --page-width: 1380px;
   --gutter: clamp(24px, 5.3vw, 104px);
   --section-space: clamp(48px, 3vw, 64px);
@@ -26,7 +28,7 @@ h1, h2, h3 { font-weight: 700; }
 .page-width { width: min(var(--page-width), calc(100% - var(--gutter) * 2)); margin-inline: auto; }
 
 .hero {
-  min-height: clamp(320px, 20vw, 380px);
+  min-height: 0;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -47,7 +49,7 @@ h1, h2, h3 { font-weight: 700; }
 .social-link .social-dot { fill: currentColor; stroke: none; }
 .facebook-link svg { fill: currentColor; stroke: none; }
 .spotify-link svg { width: 32px; height: 32px; stroke-width: 1.8; }
-.hero-inner { flex: 1; display: flex; flex-direction: column; align-items: center; padding: var(--section-space) 20px 50px; text-align: center; }
+.hero-inner { flex: 1; display: flex; flex-direction: column; align-items: center; padding: var(--section-space) 20px calc(var(--visual-gap) - var(--artwork-blank-edge)); text-align: center; }
 .brand {
   margin: 0;
   font-family: inherit;
@@ -59,12 +61,12 @@ h1, h2, h3 { font-weight: 700; }
 
 .stripe { background: var(--gold); }
 .stripe-inner {
-  min-height: 390px;
+  min-height: 0;
   display: grid;
   grid-template-columns: .618fr 1fr;
   align-items: center;
   gap: clamp(46px, 8vw, 138px);
-  padding-block: var(--section-space) 68px;
+  padding-block: 0 calc(var(--visual-gap) - var(--artwork-blank-edge));
 }
 .hero-art { margin: 0; width: min(100%, 555px); justify-self: start; }
 .art-frame { overflow: hidden; background: transparent; }
@@ -74,7 +76,7 @@ h1, h2, h3 { font-weight: 700; }
 .stripe-main h2 { max-width: 680px; margin: 0; font-size: clamp(36px, 4.8vw, 70px); font-weight: 800; letter-spacing: -.055em; line-height: .98; }
 .stripe-main > p:last-child { margin: 20px 0 0; font-size: clamp(25px, 3.3vw, 48px); letter-spacing: -.04em; line-height: 1.1; }
 
-.gigs { padding: var(--section-space) 24px 110px; background: var(--gold); }
+.gigs { padding: 0 24px 110px; background: var(--gold); }
 .gigs-inner { width: min(1200px, 100%); margin-inline: auto; }
 .gigs-heading { margin: 0 0 46px; }
 .gigs h2 { margin: 0; font-size: clamp(38px, 4vw, 54px); font-weight: 800; letter-spacing: .015em; line-height: 1; }
@@ -94,32 +96,40 @@ h1, h2, h3 { font-weight: 700; }
 .footer-socials { margin-left: auto; display: flex; gap: 18px; text-transform: uppercase; font-weight: 800; letter-spacing: .08em; }
 
 @media (max-width: 850px) {
-  :root { --gutter: 28px; --section-space: 40px; }
-  .hero { min-height: 320px; }
+  :root {
+    --gutter: 28px;
+    --section-space: 40px;
+    --artwork-blank-edge: clamp(20px, calc(4.6vw - 4px), 35px);
+  }
+  .hero { min-height: 0; }
   .topbar { min-height: 82px; }
-  .hero-inner { padding: var(--section-space) 18px 70px; }
+  .hero-inner { padding: var(--section-space) 18px calc(var(--visual-gap) - var(--artwork-blank-edge)); }
   .brand { font-size: clamp(52px, 10vw, 82px); }
-  .stripe-inner { min-height: 0; gap: 28px; padding-block: 32px 50px; }
+  .stripe-inner { min-height: 0; gap: 28px; padding-block: 0 calc(var(--visual-gap) - var(--artwork-blank-edge)); }
   .stripe-main h2 { font-size: clamp(31px, 5.4vw, 48px); }
   .stripe-main > p:last-child { font-size: clamp(22px, 3.6vw, 32px); }
-  .gigs { padding-inline: var(--gutter); }
+  .gigs { padding: 0 var(--gutter) 110px; }
 }
 @media (max-width: 560px) {
-  :root { --gutter: 20px; --section-space: 28px; }
-  .hero { min-height: 220px; }
+  :root {
+    --gutter: 20px;
+    --section-space: 28px;
+    --artwork-blank-edge: clamp(28px, calc(12.05vw - 4.82px), 49px);
+  }
+  .hero { min-height: 0; }
   .topbar { min-height: 72px; }
   .top-nav { gap: 20px; }
   .social-link, .social-link svg { width: 29px; height: 29px; }
   .spotify-link svg { width: 31px; height: 31px; }
-  .hero-inner { padding: var(--section-space) 14px 30px; }
+  .hero-inner { padding: var(--section-space) 14px calc(var(--visual-gap) - var(--artwork-blank-edge)); }
   .brand { font-size: clamp(43px, 11vw, 62px); }
-  .stripe-inner { grid-template-columns: 1fr; gap: 8px; padding-block: var(--section-space) 44px; }
+  .stripe-inner { grid-template-columns: 1fr; gap: 8px; padding-block: 0 calc(var(--visual-gap) - var(--artwork-blank-edge)); }
   .hero-art { width: min(100%, 410px); justify-self: center; }
   .stripe-main { padding: 0 4px; }
   .stripe-kicker { margin-bottom: 12px; font-size: 10px; }
   .stripe-main h2 { font-size: clamp(35px, 10vw, 48px); }
   .stripe-main > p:last-child { margin-top: 9px; font-size: clamp(25px, 7.2vw, 34px); }
-  .gigs { padding: var(--section-space) var(--gutter) 60px; }
+  .gigs { padding: 0 var(--gutter) 60px; }
   .gigs-inner { width: 100%; }
   .gigs-heading { margin-bottom: 20px; }
   .gigs h2 { font-size: 38px; }

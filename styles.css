@@ -103,12 +103,12 @@ a { color: inherit; }
 }
 @media (max-width: 560px) {
   :root { --gutter: 20px; --section-space: 28px; }
-  .hero { min-height: 280px; }
+  .hero { min-height: 220px; }
   .topbar { min-height: 72px; }
   .top-nav { gap: 20px; }
   .social-link, .social-link svg { width: 29px; height: 29px; }
   .spotify-link svg { width: 31px; height: 31px; }
-  .hero-inner { padding: var(--section-space) 14px 55px; }
+  .hero-inner { padding: var(--section-space) 14px 30px; }
   .brand { font-size: clamp(43px, 11vw, 62px); }
   .stripe-inner { grid-template-columns: 1fr; gap: 8px; padding-block: var(--section-space) 44px; }
   .hero-art { width: min(100%, 410px); justify-self: center; }
@@ -120,11 +120,11 @@ a { color: inherit; }
   .gigs-inner { width: 100%; }
   .gigs-heading { margin-bottom: 20px; }
   .gigs h2 { font-size: 38px; }
-  .gig { min-height: 68px; grid-template-columns: 1fr auto; grid-template-rows: auto auto; gap: 5px 12px; padding-block: 10px; }
+  .gig { min-height: 68px; grid-template-columns: 1fr; grid-template-rows: auto auto auto; gap: 5px 12px; padding-block: 10px; }
   .gig time { grid-column: 1; grid-row: 1; font-size: 11px; }
   .gig strong { grid-column: 1; grid-row: 2; font-size: 12px; }
   .gig > span:not(.gig-arrow) { grid-column: 1; grid-row: 3; font-size: 11px; }
-  .gig-arrow { grid-column: 2; grid-row: 1 / 4; opacity: 1; }
+  .gig-arrow { display: none; }
   .site-footer { min-height: 68px; gap: 11px; font-size: 8px; }
   .footer-brand { font-size: 8px; }
   .footer-brand span { margin-left: 4px; }

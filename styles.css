@@ -52,12 +52,10 @@ h1, h2, h3 { font-weight: 700; }
 .hero-inner { flex: 1; display: flex; flex-direction: column; align-items: center; padding: var(--section-space) 20px calc(var(--visual-gap) - var(--artwork-blank-edge)); text-align: center; }
 .brand {
   margin: 0;
-  font-family: inherit;
-  font-size: clamp(58px, 7vw, 112px);
-  font-weight: 800;
-  letter-spacing: -.045em;
-  line-height: .98;
+  width: min(100%, 800px);
+  line-height: 0;
 }
+.brand img { display: block; width: 100%; height: auto; }
 
 .stripe { background: var(--gold); }
 .stripe-inner {
@@ -104,7 +102,6 @@ h1, h2, h3 { font-weight: 700; }
   .hero { min-height: 0; }
   .topbar { min-height: 82px; }
   .hero-inner { padding: var(--section-space) 18px calc(var(--visual-gap) - var(--artwork-blank-edge)); }
-  .brand { font-size: clamp(52px, 10vw, 82px); }
   .stripe-inner { min-height: 0; gap: 28px; padding-block: 0 calc(var(--visual-gap) - var(--artwork-blank-edge)); }
   .stripe-main h2 { font-size: clamp(31px, 5.4vw, 48px); }
   .stripe-main > p:last-child { font-size: clamp(22px, 3.6vw, 32px); }
@@ -122,7 +119,6 @@ h1, h2, h3 { font-weight: 700; }
   .social-link, .social-link svg { width: 29px; height: 29px; }
   .spotify-link svg { width: 31px; height: 31px; }
   .hero-inner { padding: var(--section-space) 14px calc(var(--visual-gap) - var(--artwork-blank-edge)); }
-  .brand { font-size: clamp(43px, 11vw, 62px); }
   .stripe-inner { grid-template-columns: 1fr; gap: 8px; padding-block: 0 calc(var(--visual-gap) - var(--artwork-blank-edge)); }
   .hero-art { width: min(100%, 410px); justify-self: center; }
   .stripe-main { padding: 0 4px; }

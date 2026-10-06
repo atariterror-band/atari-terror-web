@@ -52,7 +52,7 @@ h1, h2, h3 { font-weight: 700; }
 .hero-inner { flex: 1; display: flex; flex-direction: column; align-items: center; padding: var(--section-space) 20px calc(var(--visual-gap) - var(--artwork-blank-edge)); text-align: center; }
 .brand {
   margin: 0;
-  width: min(100%, 800px);
+  width: min(100%, 1000px);
   line-height: 0;
 }
 .brand img { display: block; width: 100%; height: auto; }
@@ -71,13 +71,13 @@ h1, h2, h3 { font-weight: 700; }
 .art-frame img { display: block; width: 100%; height: auto; mix-blend-mode: multiply; }
 .stripe-main { position: relative; padding-left: clamp(0px, 2vw, 30px); }
 .stripe-kicker { margin: 0 0 20px; text-transform: uppercase; font-size: 12px; font-weight: 800; letter-spacing: .16em; }
-.stripe-main h2 { max-width: 680px; margin: 0; font-size: clamp(36px, 4.8vw, 70px); font-weight: 800; letter-spacing: -.055em; line-height: .98; }
-.stripe-main > p:last-child { margin: 20px 0 0; font-size: clamp(25px, 3.3vw, 48px); letter-spacing: -.04em; line-height: 1.1; }
+.stripe-main h2 { max-width: 680px; margin: 0; font-size: clamp(30px, 3.5vw, 50px); font-weight: 800; letter-spacing: -.055em; line-height: .98; }
+.stripe-main > p:last-child { margin: 20px 0 0; font-size: clamp(20px, 2.5vw, 36px); letter-spacing: -.04em; line-height: 1.1; }
 
 .gigs { padding: 0 24px 110px; background: var(--gold); }
 .gigs-inner { width: min(1200px, 100%); margin-inline: auto; }
 .gigs-heading { margin: 0 0 46px; }
-.gigs h2 { margin: 0; font-size: clamp(38px, 4vw, 54px); font-weight: 800; letter-spacing: .015em; line-height: 1; }
+.gigs h2 { margin: 0; font-size: clamp(32px, 3.2vw, 44px); font-weight: 800; letter-spacing: .015em; line-height: 1; }
 .gig-list { border-top: 1px solid rgba(0,0,0,.62); }
 .gig { min-height: 74px; display: grid; grid-template-columns: 22% 37% 37% 4%; align-items: center; border-bottom: 1px solid rgba(0,0,0,.38); }
 .gig time { font-variant-numeric: tabular-nums; font-size: 14px; letter-spacing: .025em; }
@@ -103,8 +103,8 @@ h1, h2, h3 { font-weight: 700; }
   .topbar { min-height: 82px; }
   .hero-inner { padding: var(--section-space) 18px calc(var(--visual-gap) - var(--artwork-blank-edge)); }
   .stripe-inner { min-height: 0; gap: 28px; padding-block: 0 calc(var(--visual-gap) - var(--artwork-blank-edge)); }
-  .stripe-main h2 { font-size: clamp(31px, 5.4vw, 48px); }
-  .stripe-main > p:last-child { font-size: clamp(22px, 3.6vw, 32px); }
+  .stripe-main h2 { font-size: clamp(28px, 4vw, 36px); }
+  .stripe-main > p:last-child { font-size: clamp(20px, 2.8vw, 26px); }
   .gigs { padding: 0 var(--gutter) 110px; }
 }
 @media (max-width: 560px) {
@@ -123,12 +123,12 @@ h1, h2, h3 { font-weight: 700; }
   .hero-art { width: min(100%, 410px); justify-self: center; }
   .stripe-main { padding: 0 4px; }
   .stripe-kicker { margin-bottom: 12px; font-size: 10px; }
-  .stripe-main h2 { font-size: clamp(35px, 10vw, 48px); }
-  .stripe-main > p:last-child { margin-top: 9px; font-size: clamp(25px, 7.2vw, 34px); }
+  .stripe-main h2 { font-size: clamp(24px, 7vw, 32px); }
+  .stripe-main > p:last-child { margin-top: 9px; font-size: clamp(18px, 5vw, 24px); }
   .gigs { padding: 0 var(--gutter) 60px; }
   .gigs-inner { width: 100%; }
   .gigs-heading { margin-bottom: 20px; }
-  .gigs h2 { font-size: 38px; }
+  .gigs h2 { font-size: 30px; }
   .gig { min-height: 68px; grid-template-columns: 1fr; grid-template-rows: auto auto auto; gap: 5px 12px; padding-block: 10px; }
   .gig time { grid-column: 1; grid-row: 1; font-size: 11px; }
   .gig strong { grid-column: 1; grid-row: 2; font-size: 12px; }

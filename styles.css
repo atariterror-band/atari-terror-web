@@ -60,7 +60,7 @@ h1, h2, h3 { font-weight: 700; }
 .carousel-section { padding: 0 24px clamp(42px, 5vw, 74px); }
 .carousel { width: min(1200px, 100%); margin-inline: auto; }
 .carousel, .carousel-viewport, .carousel-track, .carousel-slide { border: 0 !important; outline: 0 !important; box-shadow: none !important; filter: none !important; }
-.carousel-viewport { overflow: hidden; border-radius: 18px; background: #05070b; }
+.carousel-viewport { overflow: hidden; border-radius: 18px; background: transparent; }
 .carousel-track { display: flex; align-items: stretch; transition: transform 650ms cubic-bezier(.2,.7,.2,1); will-change: transform; }
 .carousel-slide { position: relative; display: grid; flex: 0 0 100%; min-height: clamp(261px, 22.5vw, 333px); overflow: hidden; }
 .clawfinger-slide { grid-template-columns: 1fr 1fr; align-items: stretch; background: #05070b; color: #fff; }

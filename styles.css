@@ -118,8 +118,8 @@ h1, h2, h3 { font-weight: 700; }
   .top-nav { gap: 20px; }
   .social-link, .social-link svg { width: 29px; height: 29px; }
   .spotify-link svg { width: 31px; height: 31px; }
-  .hero-inner { padding: var(--section-space) 14px calc(var(--visual-gap) - var(--artwork-blank-edge)); }
-  .stripe-inner { grid-template-columns: 1fr; gap: 8px; padding-block: 0 calc(var(--visual-gap) - var(--artwork-blank-edge)); }
+  .hero-inner { padding: var(--section-space) 14px calc(var(--visual-gap) - var(--artwork-blank-edge) - 20px); }
+  .stripe-inner { grid-template-columns: 1fr; gap: 8px; padding-block: 0 calc(var(--visual-gap) - var(--artwork-blank-edge) + 10px); }
   .hero-art { width: min(100%, 410px); justify-self: center; }
   .stripe-main { padding: 0 4px; }
   .stripe-kicker { margin-bottom: 12px; font-size: 10px; }

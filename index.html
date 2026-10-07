@@ -17,37 +17,59 @@
 </head>
 <body>
   <main>
-    <section class="hero" id="hero" aria-labelledby="hero-title">
-      <header class="topbar page-width">
-        <nav class="top-nav" aria-label="Sociální sítě Atari Terror">
-          <a class="social-link" href="https://www.instagram.com/atari_terror_oficialni/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Atari Terror">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle class="social-dot" cx="18" cy="6" r="1"/></svg>
-          </a>
-          <a class="social-link facebook-link" href="https://www.facebook.com/atariterror/" target="_blank" rel="noopener noreferrer" aria-label="Facebook Atari Terror">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.2 21v-8h2.7l.4-3.2h-3.1v-2c0-.9.3-1.5 1.6-1.5h1.7V3.4c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.2H8v3.2h2.8v8z"/></svg>
-          </a>
-          <a class="social-link spotify-link" href="https://open.spotify.com/artist/7tuvvz0x2oNyY8JTXRcqmp" target="_blank" rel="noopener noreferrer" aria-label="Atari Terror na Spotify">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M6.5 9.3c3.7-1.1 7.7-.8 11 .9M7.4 12.4c3-.8 6.3-.5 9 .8M8.2 15.3c2.4-.6 4.8-.3 6.9.7"/></svg>
-          </a>
-        </nav>
-      </header>
+    <header class="topbar page-width">
+      <nav class="top-nav" aria-label="Sociální sítě Atari Terror">
+        <a class="social-link" href="https://www.instagram.com/atari_terror_oficialni/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Atari Terror">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle class="social-dot" cx="18" cy="6" r="1"/></svg>
+        </a>
+        <a class="social-link facebook-link" href="https://www.facebook.com/atariterror/" target="_blank" rel="noopener noreferrer" aria-label="Facebook Atari Terror">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.2 21v-8h2.7l.4-3.2h-3.1v-2c0-.9.3-1.5 1.6-1.5h1.7V3.4c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.2H8v3.2h2.8v8z"/></svg>
+        </a>
+        <a class="social-link spotify-link" href="https://open.spotify.com/artist/7tuvvz0x2oNyY8JTXRcqmp" target="_blank" rel="noopener noreferrer" aria-label="Atari Terror na Spotify">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M6.5 9.3c3.7-1.1 7.7-.8 11 .9M7.4 12.4c3-.8 6.3-.5 9 .8M8.2 15.3c2.4-.6 4.8-.3 6.9.7"/></svg>
+        </a>
+      </nav>
+    </header>
 
+    <section class="hero" id="hero" aria-labelledby="hero-title">
       <div class="hero-inner page-width">
         <h1 class="brand" id="hero-title"><img src="assets/images/at-logo-2.svg" alt="Atari Terror"></h1>
       </div>
     </section>
 
-    <section class="stripe" id="stripe" aria-labelledby="stripe-title">
-      <div class="stripe-inner page-width">
-        <figure class="hero-art">
-          <div class="art-frame">
-            <img src="assets/images/believer-lp.jpeg" alt="Vinylové vydání Believer: obal Atari Terror a zelená gramofonová deska" loading="lazy">
+    <section class="carousel-section" aria-label="Aktuality Atari Terror">
+      <div class="carousel page-width" data-carousel aria-roledescription="carousel">
+        <div class="carousel-viewport">
+          <div class="carousel-track">
+            <article class="carousel-slide clawfinger-slide" aria-roledescription="slide" aria-label="1 z 2: Clawfinger, Atari Terror a Sickret">
+              <div class="slide-copy event-copy">
+                <p class="event-date">24/10/2026</p>
+                <h2><span class="act-headliner">Clawfinger</span><span class="act-support">Atari Terror</span><span class="act-support act-secondary">Sickret</span></h2>
+                <p class="event-venue">Praha, SaSaZu Holešovice</p>
+              </div>
+              <div class="clawfinger-art" role="img" aria-label="Grafika Clawfinger — Before We All Die"></div>
+            </article>
+
+            <article class="carousel-slide album-slide" aria-roledescription="slide" aria-label="2 z 2: Nová deska">
+              <figure class="album-art">
+                <img src="assets/images/believer-lp.jpeg" alt="Vinylové vydání Believer: obal Atari Terror a zelená gramofonová deska">
+              </figure>
+              <div class="slide-copy album-copy">
+                <p class="stripe-kicker">Atari Terror · 2026</p>
+                <h2>NEW ALBUM STATUS</h2>
+                <p>Working in Studiooo</p>
+              </div>
+            </article>
           </div>
-        </figure>
-        <div class="stripe-main">
-          <p class="stripe-kicker">Atari Terror · 2026</p>
-          <h2 id="stripe-title">NEW ALBUM STATUS</h2>
-          <p>Working in Studiooo</p>
+        </div>
+
+        <div class="carousel-controls" aria-label="Ovládání carouselu">
+          <div class="carousel-pagination" role="group" aria-label="Vybrat položku carouselu">
+            <button class="carousel-dot is-active" type="button" data-slide-to="0" aria-label="Zobrazit koncert Clawfinger" aria-current="true"></button>
+            <button class="carousel-dot" type="button" data-slide-to="1" aria-label="Zobrazit novou desku" aria-current="false"></button>
+          </div>
+          <button class="carousel-toggle" type="button" data-toggle aria-label="Pozastavit automatický posun">Ⅱ</button>
+          <button class="carousel-arrow" type="button" data-next aria-label="Další položka">→</button>
         </div>
       </div>
     </section>
@@ -77,5 +99,6 @@
       <div class="footer-socials"><a href="https://www.instagram.com/atari_terror_oficialni/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://www.facebook.com/atariterror/" target="_blank" rel="noopener noreferrer">Facebook</a><a href="https://open.spotify.com/artist/7tuvvz0x2oNyY8JTXRcqmp" target="_blank" rel="noopener noreferrer">Spotify</a></div>
     </footer>
   </main>
+  <script src="carousel.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,179 @@
+:root {
+  --gold: #FFC400;
+  --ink: #000000;
+  --red: #FF311A;
+  --green: #22bd37;
+  --blue: #123d79;
+  --muted: rgba(0, 0, 0, .68);
+  --visual-gap: 90px;
+  --artwork-blank-edge: clamp(32px, calc(4.25vw - 5px), 58px);
+  --page-width: 1380px;
+  --gutter: clamp(24px, 5.3vw, 104px);
+  --section-space: clamp(48px, 3vw, 64px);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--gold);
+  color: var(--ink);
+  font-family: "Zalando Sans Expanded", sans-serif;
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; }
+a:hover { color: var(--red); }
+h1, h2, h3 { font-weight: 700; }
+.page-width { width: min(var(--page-width), calc(100% - var(--gutter) * 2)); margin-inline: auto; }
+
+.hero {
+  min-height: 0;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: var(--gold);
+}
+.topbar {
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+.top-nav { display: flex; justify-content: center; align-items: center; gap: clamp(26px, 4vw, 54px); }
+.social-link { width: 38px; height: 38px; display: grid; place-items: center; text-decoration: none; }
+.social-link svg { width: 30px; height: 30px; fill: none; stroke: currentColor; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
+.social-link .social-dot { fill: currentColor; stroke: none; }
+.facebook-link svg { fill: currentColor; stroke: none; }
+.spotify-link svg { width: 32px; height: 32px; stroke-width: 1.8; }
+.hero-inner { display: flex; flex-direction: column; align-items: center; padding: clamp(24px, 3vw, 44px) 20px clamp(42px, 5vw, 68px); text-align: center; }
+.brand {
+  margin: 0;
+  width: min(100%, 1000px);
+  line-height: 0;
+}
+.brand img { display: block; width: 100%; height: auto; }
+
+.carousel-section { padding: 0 24px clamp(42px, 5vw, 74px); }
+.carousel { width: min(1200px, 100%); margin-inline: auto; }
+.carousel, .carousel-viewport, .carousel-track, .carousel-slide { border: 0 !important; outline: 0 !important; box-shadow: none !important; filter: none !important; }
+.carousel-viewport { overflow: hidden; border-radius: 18px; background: transparent; }
+.carousel-track { display: flex; align-items: stretch; transition: transform 650ms cubic-bezier(.2,.7,.2,1); will-change: transform; }
+.carousel-slide { position: relative; display: grid; flex: 0 0 100%; min-height: clamp(261px, 22.5vw, 333px); overflow: hidden; }
+.clawfinger-slide { grid-template-columns: 1fr 1fr; align-items: stretch; background: #05070b; color: #fff; }
+.slide-copy { position: relative; z-index: 1; align-self: center; padding: clamp(25px, 3.8vw, 58px); }
+.event-date { margin: 0 0 clamp(13px, 1.8vw, 25px); font-size: clamp(20px, 2.16vw, 32px); font-weight: 500; letter-spacing: .015em; }
+.event-copy h2 { margin: 0; font-size: clamp(27px, 3.51vw, 52px); font-weight: 700; letter-spacing: -.035em; line-height: 1.08; }
+.event-copy h2 span { display: block; }
+.act-headliner { font-size: 1em; }
+.act-support { font-size: .94em; }
+.act-secondary { font-size: .88em; }
+.event-venue { margin: clamp(16px, 2.5vw, 34px) 0 0; font-size: clamp(15px, 1.98vw, 29px); font-weight: 500; line-height: 1.2; }
+.clawfinger-art {
+  position: absolute;
+  inset: 0 0 0 auto;
+  width: 57%;
+  overflow: hidden;
+  background-image: linear-gradient(90deg, #05070b 0%, #05070b 29%, rgba(5,7,11,.72) 33%, transparent 39%), url("assets/images/clawfinger-before-we-all-die.png");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 100% 100%, auto 100%;
+}
+.clawfinger-art::after { content: ""; position: absolute; right: 8px; bottom: 8px; width: 76px; height: 34px; background: #05070b; }
+.album-slide { grid-template-columns: 1.05fr .95fr; align-items: center; background: var(--gold); color: var(--ink); }
+.album-art { display: grid; place-items: center; width: 100%; height: 100%; min-height: 0; margin: 0; overflow: hidden; }
+.album-art img { display: block; width: 100%; height: 100%; max-height: 370px; object-fit: contain; mix-blend-mode: multiply; }
+.album-copy { padding-left: clamp(8px, 3vw, 44px); }
+.stripe-kicker { margin: 0 0 18px; text-transform: uppercase; font-size: 12px; font-weight: 800; letter-spacing: .16em; }
+.album-copy h2 { max-width: 680px; margin: 0; font-size: clamp(27px, 3.15vw, 45px); font-weight: 800; letter-spacing: -.055em; line-height: .98; }
+.album-copy > p:last-child { margin: 18px 0 0; font-size: clamp(18px, 2.25vw, 32px); letter-spacing: -.04em; line-height: 1.1; }
+.carousel-controls { display: flex; align-items: center; justify-content: flex-end; gap: 12px; min-height: 48px; padding-top: 12px; }
+.carousel-controls button { color: var(--ink); background: transparent; border: 0; font: inherit; cursor: pointer; }
+.carousel-controls button:hover { color: var(--red); }
+.carousel-controls button:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+.carousel-arrow, .carousel-toggle { display: grid; place-items: center; width: 34px; height: 30px; padding: 0; font-size: 20px !important; line-height: 1; }
+.carousel-toggle { font-size: 15px !important; }
+.carousel-pagination { display: flex; align-items: center; gap: 8px; }
+.carousel-dot { width: 8px; height: 8px; padding: 0; border-radius: 50%; background: rgba(0,0,0,.38) !important; }
+.carousel-dot.is-active { width: 20px; border-radius: 8px; background: var(--red) !important; }
+
+.gigs { padding: 0 24px 110px; background: var(--gold); }
+.gigs-inner { width: min(1200px, 100%); margin-inline: auto; }
+.gigs-heading { margin: 0 0 46px; }
+.gigs h2 { margin: 0; font-size: clamp(32px, 3.2vw, 44px); font-weight: 800; letter-spacing: .015em; line-height: 1; }
+.gig-list { border-top: 0; }
+.gig { min-height: 74px; display: grid; grid-template-columns: 22% 37% 37% 4%; align-items: center; border-bottom: 1px solid rgba(0,0,0,.38); }
+.gig time { font-variant-numeric: tabular-nums; font-size: 14px; letter-spacing: .025em; }
+.gig strong { font-size: 15px; font-weight: 800; text-transform: uppercase; }
+.gig > span:not(.gig-arrow) { font-size: 14px; }
+.gig-arrow { justify-self: end; color: var(--red); font-size: 16px; opacity: 0; transform: translate(-4px, 4px); transition: opacity .18s ease, transform .18s ease; }
+.gig:hover .gig-arrow { opacity: 1; transform: translate(0, 0); }
+.site-footer { width: min(980px, calc(100% - var(--gutter) * 2)); min-height: 70px; margin-inline: auto; border-top: 1px solid rgba(0,0,0,.42); display: flex; align-items: center; gap: 24px; color: rgba(0,0,0,.78); font-size: 10px; }
+.site-footer a { text-decoration: none; }
+.site-footer a:hover { color: var(--red); }
+.footer-brand { color: var(--ink); font-size: 10px; font-weight: 800; letter-spacing: .11em; white-space: nowrap; }
+.footer-brand span { margin-left: 7px; font-weight: 400; }
+.footer-line { width: 1px; height: 18px; background: rgba(0,0,0,.35); }
+.footer-socials { margin-left: auto; display: flex; gap: 18px; text-transform: uppercase; font-weight: 800; letter-spacing: .08em; }
+
+@media (max-width: 850px) {
+  :root {
+    --gutter: 28px;
+    --section-space: 40px;
+    --artwork-blank-edge: clamp(20px, calc(4.6vw - 4px), 35px);
+  }
+  .topbar { min-height: 82px; }
+  .hero-inner { padding: var(--section-space) 18px clamp(28px, 5vw, 46px); }
+  .carousel-section { padding-inline: var(--gutter); }
+  .carousel-slide { min-height: clamp(243px, 36vw, 306px); }
+  .gigs { padding: 0 var(--gutter) 110px; }
+}
+@media (max-width: 560px) {
+  :root {
+    --gutter: 20px;
+    --section-space: 28px;
+    --artwork-blank-edge: clamp(28px, calc(12.05vw - 4.82px), 49px);
+  }
+  .topbar { min-height: 72px; }
+  .top-nav { gap: 20px; }
+  .social-link, .social-link svg { width: 29px; height: 29px; }
+  .spotify-link svg { width: 31px; height: 31px; }
+  .hero-inner { padding: var(--section-space) 14px 28px; }
+  .carousel-section { padding: 0 var(--gutter) 34px; }
+  .carousel-slide { min-height: 0; }
+  .carousel-viewport { border: 0; outline: 0; box-shadow: none; border-radius: 14px; }
+  .carousel-track, .carousel-slide { border: 0; outline: 0; box-shadow: none; }
+  .clawfinger-slide, .album-slide { grid-template-columns: 1fr; grid-template-rows: 171px auto; }
+  .clawfinger-art { position: relative; inset: auto; grid-row: 1; width: 100%; min-height: 171px; background-image: linear-gradient(90deg, #05070b 0%, #05070b 29%, rgba(5,7,11,.72) 33%, transparent 39%), url("assets/images/clawfinger-before-we-all-die.png"); background-size: 100% 100%, auto 100%; background-position: right center; }
+  .slide-copy { grid-row: 2; padding: 22px 20px 26px; }
+  .slide-copy { padding: 20px 20px 24px; }
+  .event-date { margin-bottom: 11px; font-size: 18px; }
+  .event-copy h2 { font-size: clamp(25px, 7.2vw, 34px); }
+  .event-venue { margin-top: 14px; font-size: 15px; }
+  .album-slide { grid-template-rows: min(50.4vw, 216px) auto; }
+  .album-art { grid-row: 1; height: min(50.4vw, 216px); }
+  .album-art img { max-height: 100%; }
+  .album-copy { padding: 4px 20px 24px; }
+  .stripe-kicker { margin-bottom: 12px; font-size: 10px; }
+  .album-copy h2 { font-size: clamp(23px, 6.3vw, 31px); }
+  .album-copy > p:last-child { margin-top: 9px; font-size: clamp(16px, 4.5vw, 22px); }
+  .carousel-controls { justify-content: center; min-height: 30px; padding-top: 4px; }
+  .carousel-section { padding-bottom: 12px; }
+  .gigs { padding: 5px var(--gutter) 60px; }
+  .gigs-inner { width: 100%; }
+  .gigs-heading { margin-bottom: 20px; }
+  .gigs h2 { font-size: 30px; }
+  .gig { min-height: 68px; grid-template-columns: 1fr; grid-template-rows: auto auto auto; gap: 5px 12px; padding-block: 10px; }
+  .gig time { grid-column: 1; grid-row: 1; font-size: 11px; }
+  .gig strong { grid-column: 1; grid-row: 2; font-size: 12px; }
+  .gig > span:not(.gig-arrow) { grid-column: 1; grid-row: 3; font-size: 11px; }
+  .gig-arrow { display: none; }
+  .site-footer { min-height: 68px; gap: 11px; font-size: 8px; }
+  .footer-brand { font-size: 8px; }
+  .footer-brand span { margin-left: 4px; }
+  .footer-line { height: 20px; }
+  .footer-socials { gap: 9px; letter-spacing: .035em; }
+}

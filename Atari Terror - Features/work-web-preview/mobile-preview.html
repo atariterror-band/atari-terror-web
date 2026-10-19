@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#222">
+  <title>Atari Terror — mobilní náhled</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { min-height: 100%; }
+    body {
+      margin: 0;
+      padding: 28px;
+      display: grid;
+      place-items: center;
+      gap: 14px;
+      background: #222;
+      color: #f5f5f5;
+      font: 500 13px/1.4 system-ui, sans-serif;
+    }
+    .preview { display: grid; justify-items: center; gap: 12px; }
+    .label { margin: 0; opacity: .8; letter-spacing: .04em; }
+    .device {
+      width: 414px;
+      height: 868px;
+      padding: 12px;
+      overflow: hidden;
+      border-radius: 42px;
+      background: #080808;
+      box-shadow: 0 18px 60px #0009, inset 0 0 0 1px #555;
+    }
+    iframe {
+      display: block;
+      width: 390px;
+      height: 844px;
+      border: 0;
+      border-radius: 31px;
+      background: #FFC400;
+    }
+    @media (max-height: 940px) {
+      body { padding-block: 16px; }
+      .device { transform: scale(.8); transform-origin: top center; margin-bottom: -174px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="preview">
+    <p class="label">MOBILNÍ NÁHLED · 390 × 844 px</p>
+    <div class="device">
+      <iframe src="index.html" title="Atari Terror v mobilním rozlišení 390 × 844 px"></iframe>
+    </div>
+  </main>
+</body>
+</html>

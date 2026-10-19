@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffc400">
+  <title>AT SHOP — Atari Terror</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="wordmark" href="#top" aria-label="AT Shop, začátek">ATARI TERROR <span>SHOP</span></a>
+    <nav aria-label="Hlavní navigace"><a href="#products">MERCH</a><a href="#preorder">PŘEDOBJEDNÁVKY</a></nav>
+    <button class="cart-trigger" id="open-cart" aria-label="Otevřít košík">KOŠÍK <b id="cart-count">0</b></button>
+  </header>
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy"><p class="eyebrow">OFICIÁLNÍ E-SHOP ATARI TERROR</p><h1>12 LET TICHA.<br>12 LET ČEKÁ.<br><em>TEĎ SE VRACÍ.</em></h1><p>Nová deska se blíží. Proces probíhá. Všechno je na svém místě. Skoro.</p><a class="button dark" href="#products">PROHLÉDNOUT MERCH <span>↘</span></a></div>
+      <div class="hero-art"><img src="../work-web-preview/assets/images/believer-lp.jpeg" alt="Vinylové vydání alba Believer od Atari Terror"><span class="sticker">BELIEVER<br>FOREVER!</span></div>
+    </section>
+    <section class="notice" id="preorder"><span class="notice-mark">!</span><p><strong>PŘEDOBJEDNÁVKA</strong> LP, trička i čepice budeme odesílat až v první čtvrtině roku 2027, pravděpodobně na přelomu února a března.</p><span class="notice-thanks">DÍKY ZA TRPĚLIVOST.</span></section>
+    <section class="catalog" id="products">
+      <div class="section-heading"><div><p class="eyebrow">NOVÉ ALBUM + MERCHANDISE</p><h2>VYBER SI SVŮJ <em>BELIEVER.</em></h2></div><label class="search"><span>HLEDAT</span><input id="search" type="search" placeholder="Produkt…" aria-label="Hledat produkt"></label></div>
+      <div class="filters" role="group" aria-label="Filtrovat produkty"><button class="filter active" data-filter="all">VŠE</button><button class="filter" data-filter="vinyl">LP</button><button class="filter" data-filter="apparel">TRIČKA & ČEPICE</button><button class="filter" data-filter="bundle">SETY</button></div>
+      <div class="products" id="products-grid"></div>
+    </section>
+    <section class="promise"><span>01 / PŘEDOBJEDNÁVKA</span><p>Rezervuj si svou edici už teď. U limitované vinylové edice jde jen o 100 podepsaných kusů.</p><span>02 / EXPEDICE</span><p>Objednávky odešleme v první čtvrtině roku 2027, podle aktuálního plánu na přelomu února a března.</p><span>03 / BELIEVER FOREVER</span><p>Všechny nákupy i informace o objednávce najdeš přehledně na jednom místě.</p></section>
+  </main>
+  <footer><a class="wordmark" href="#top">ATARI TERROR <span>SHOP</span></a><span>© 2026 ATARI TERROR</span><a class="admin-link" href="admin.html">SPRÁVA E-SHOPU ↗</a></footer>
+  <div class="scrim" id="scrim" hidden></div>
+  <aside class="drawer" id="cart-drawer" aria-label="Nákupní košík" aria-hidden="true"><div class="drawer-head"><div><p class="eyebrow">AT SHOP</p><h2>KOŠÍK <span id="drawer-count">(0)</span></h2></div><button class="icon-button" data-close aria-label="Zavřít košík">×</button></div><div id="cart-lines" class="cart-lines"></div><div class="cart-footer" id="cart-footer"></div></aside>
+  <section class="checkout-modal" id="checkout-modal" aria-hidden="true" aria-label="Dokončit objednávku"><div class="modal-head"><div><p class="eyebrow">JEŠTĚ KROK</p><h2>DOKONČIT OBJEDNÁVKU</h2></div><button class="icon-button" data-close aria-label="Zavřít">×</button></div><form id="checkout-form"><div class="form-grid"><label>Jméno a příjmení<input name="name" autocomplete="name" required></label><label>E-mail<input name="email" type="email" autocomplete="email" required></label><label class="wide">Ulice a číslo<input name="street" autocomplete="street-address" required></label><label>PSČ<input name="zip" autocomplete="postal-code" required></label><label>Město<input name="city" autocomplete="address-level2" required></label></div><fieldset><legend>DOPRAVA</legend><label class="choice"><input type="radio" name="shipping" value="Zásilkovna" checked><span>Zásilkovna <small>Výběr výdejního místa po zapojení dopravce</small></span><b>89 Kč</b></label><label class="choice"><input type="radio" name="shipping" value="Kurýr"><span>Doručení na adresu <small>Kurýrní služba</small></span><b>129 Kč</b></label><label class="choice"><input type="radio" name="shipping" value="Osobní odběr"><span>Osobní odběr <small>Po domluvě s kapelou</small></span><b>0 Kč</b></label></fieldset><fieldset><legend>PLATBA</legend><label class="choice"><input type="radio" name="payment" value="Comgate" checked><span>Online platba <small>Karta, Apple Pay, Google Pay přes Comgate</small></span><b>↗</b></label><label class="choice"><input type="radio" name="payment" value="Převod"><span>Bankovní převod <small>Platební údaje v potvrzení objednávky</small></span><b>QR</b></label></fieldset><p class="checkout-note">Jde o návrhový prototyp. Objednávka se uloží pouze v tomto prohlížeči; platba ani její odeslání do Comgate zde neproběhne.</p><button class="button dark submit-order" type="submit">VYTVOŘIT TESTOVACÍ OBJEDNÁVKU <span>→</span></button></form></section>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="shop.js" defer></script>
+</body>
+</html>

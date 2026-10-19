@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffc400">
+  <title>Správa e-shopu — ATARI TERROR</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="admin-body">
+  <div class="admin-shell">
+    <aside class="admin-sidebar">
+      <a class="wordmark" href="index.html">ATARI TERROR <span>SHOP</span></a>
+      <p class="admin-label">SPRÁVA OBCHODU</p>
+      <nav class="admin-nav" aria-label="Správa e-shopu">
+        <button class="admin-nav-item active" data-view="overview"><span>▦</span>PŘEHLED</button>
+        <button class="admin-nav-item" data-view="orders"><span>▤</span>OBJEDNÁVKY <b id="nav-order-count">0</b></button>
+        <button class="admin-nav-item" data-view="buyers"><span>♙</span>ZÁKAZNÍCI</button>
+        <button class="admin-nav-item" data-view="products"><span>◇</span>PRODUKTY</button>
+      </nav>
+      <div class="sidebar-bottom"><span class="online-dot"></span> LOKÁLNÍ NÁHLED<br><a href="index.html">← ZPĚT DO E-SHOPU</a></div>
+    </aside>
+    <main class="admin-main">
+      <header class="admin-topbar"><div><p class="eyebrow">AT SHOP / ADMIN</p><h1 id="page-title">PŘEHLED</h1></div><div class="admin-actions"><span class="demo-chip">UKÁZKOVÉ PROSTŘEDÍ</span><button id="seed-data" class="admin-secondary">NAČÍST UKÁZKOVÁ DATA</button><button id="export-csv" class="admin-primary">EXPORT OBJEDNÁVEK ↓</button></div></header>
+      <div class="demo-banner"><strong>DEMO DATA</strong><span>Objednávky a nastavení se ukládají pouze v tomto prohlížeči. Nejsou napojené na živý shop ani platební bránu.</span></div>
+      <section class="admin-view active" id="view-overview">
+        <div class="stat-grid" id="stats"></div>
+        <div class="admin-section-head"><div><p class="eyebrow">POSLEDNÍ AKTIVITA</p><h2>OBJEDNÁVKY</h2></div><button class="text-button" data-goto="orders">VŠECHNY OBJEDNÁVKY ↗</button></div>
+        <div class="table-wrap"><table><thead><tr><th>OBJEDNÁVKA</th><th>ZÁKAZNÍK</th><th>DATUM</th><th>CELKEM</th><th>DOPRAVA</th><th>STAV</th></tr></thead><tbody id="recent-orders"></tbody></table></div>
+      </section>
+      <section class="admin-view" id="view-orders">
+        <div class="admin-section-head"><div><p class="eyebrow">SPRÁVA PRODEJE</p><h2>VŠECHNY OBJEDNÁVKY</h2></div><span class="result-count" id="orders-result-count"></span></div>
+        <div class="table-tools"><label class="admin-search">⌕ <input id="order-search" type="search" placeholder="Hledat číslo, jméno nebo e-mail"></label><select id="status-filter" aria-label="Filtrovat podle stavu"><option value="all">Všechny stavy</option><option>Nová</option><option>Zaplacena</option><option>Čeká na platbu</option><option>K expedici</option><option>Odeslána</option><option>Zrušena</option></select><select id="shipping-filter" aria-label="Filtrovat podle dopravy"><option value="all">Všechny dopravy</option><option>Zásilkovna</option><option>Kurýr</option><option>Osobní odběr</option></select></div>
+        <div class="table-wrap"><table><thead><tr><th>OBJEDNÁVKA</th><th>ZÁKAZNÍK</th><th>DATUM</th><th>POLOŽKY</th><th>CELKEM</th><th>DOPRAVA</th><th>PLATBA</th><th>STAV</th></tr></thead><tbody id="orders-table"></tbody></table></div>
+      </section>
+      <section class="admin-view" id="view-buyers">
+        <div class="admin-section-head"><div><p class="eyebrow">KONTAKTNÍ PŘEHLED</p><h2>ZÁKAZNÍCI</h2></div><span class="result-count" id="buyers-result-count"></span></div>
+        <div class="table-tools"><label class="admin-search">⌕ <input id="buyer-search" type="search" placeholder="Hledat jméno nebo e-mail"></label></div>
+        <div class="table-wrap"><table><thead><tr><th>ZÁKAZNÍK</th><th>E-MAIL</th><th>OBJEDNÁVKY</th><th>CELKOVÁ HODNOTA</th><th>NAPOSLEDY OBJEDNAL</th></tr></thead><tbody id="buyers-table"></tbody></table></div>
+      </section>
+      <section class="admin-view" id="view-products">
+        <div class="admin-section-head"><div><p class="eyebrow">KATALOG A PRODEJ</p><h2>PRODUKTY</h2></div><span class="result-count" id="products-result-count"></span></div>
+        <p class="admin-note">Přepnutí dostupnosti se v tomto prototypu projeví také v zákaznickém katalogu otevřeném ve stejném prohlížeči. Skutečný sklad zatím není připojen.</p>
+        <div class="table-wrap"><table><thead><tr><th>PRODUKT</th><th>KATEGORIE</th><th>CENA</th><th>REŽIM</th><th>DOSTUPNOST</th></tr></thead><tbody id="products-table"></tbody></table></div>
+      </section>
+      <footer class="admin-footer"><span>ATARI TERROR · AT SHOP</span><span>PROTOTYP SPRÁVY · BEZ PŘIHLÁŠENÍ</span></footer>
+    </main>
+  </div>
+  <div class="admin-scrim" id="detail-scrim" hidden></div>
+  <aside class="order-detail-panel" id="order-detail" aria-hidden="true"></aside>
+  <div class="admin-toast" id="admin-toast" role="status" aria-live="polite"></div>
+  <script src="admin.js" defer></script>
+</body>
+</html>

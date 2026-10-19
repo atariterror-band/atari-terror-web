@@ -328,7 +328,7 @@ function renderTracks() {
         <span class="song-album">${track.album}</span>
         <span class="song-mark" aria-hidden="true">+</span>
       </button>
-      <a class="song-spotify" href="${spotifySearchUrl(track)}" target="_blank" rel="noopener noreferrer" aria-label="Otevřít ${track.title} na Spotify">SPOTIFY ↗</a>
+      <a class="song-spotify" href="${spotifySearchUrl(track)}" target="_blank" rel="noopener noreferrer" aria-label="Otevřít ${track.title} na Spotify"><svg class="line-arrow" viewBox="0 0 18 18" aria-hidden="true"><path d="M4 14 14 4M6 4h8v8"/></svg><span class="spotify-link-label">SPOTIFY</span></a>
     </div>`).join('');
   songList.addEventListener('click', event => {
     const button = event.target.closest('[data-track-index]');
@@ -649,7 +649,7 @@ document.querySelectorAll('[data-output]').forEach(button => button.addEventList
   if (button.dataset.output === 'poster') {
     content.innerHTML = `<div class="poster-preview"><div class="poster-sheet"><img src="${art}" alt="Ilustrace bytosti ${generated.name} na plakátu"><div class="poster-topline"><span>ATARI TERROR</span><span>AT CREATURES</span></div><div class="poster-bottom"><strong>${generated.name}</strong><span>${generated.faction}</span></div><span class="poster-price">30 Kč</span></div><p class="preview-note">Náhled plakátu · tisk za 30 Kč</p></div>`;
   } else if (button.dataset.output === 'shirt') {
-    content.innerHTML = `<div class="shirt-preview"><div class="shirt-stage"><svg class="shirt-silhouette" viewBox="0 0 420 460" role="img" aria-label="Černé tričko"><path d="M128 44 172 25Q210 64 248 25l44 19 84 49-47 82-44-25v269H135V150l-44 25-47-82Z" fill="#20201d" stroke="#777166" stroke-width="5"/><path d="M172 25Q210 85 248 25M135 150v269m164-269v269" fill="none" stroke="#4a4841" stroke-width="4"/></svg><img class="shirt-print" src="${art}" alt="Potisk bytostí ${generated.name} na tričku"></div><div class="shirt-order"><p class="eyebrow">TVŮJ MOTIV · ČERNÉ TRIČKO</p><h3>${generated.name}</h3><p>Ukázka potisku na hrudi. Objednávka otevře předobjednávkový prototyp e-shopu.</p><a class="primary-button" href="../at-shop-preview/product.html?id=tee-men">OBJEDNAT TRIČKO <span>↗</span></a></div></div>`;
+    content.innerHTML = `<div class="shirt-preview"><div class="shirt-stage"><svg class="shirt-silhouette" viewBox="0 0 420 460" role="img" aria-label="Černé tričko"><path d="M128 44 172 25Q210 64 248 25l44 19 84 49-47 82-44-25v269H135V150l-44 25-47-82Z" fill="#20201d" stroke="#777166" stroke-width="5"/><path d="M172 25Q210 85 248 25M135 150v269m164-269v269" fill="none" stroke="#4a4841" stroke-width="4"/></svg><img class="shirt-print" src="${art}" alt="Potisk bytostí ${generated.name} na tričku"></div><div class="shirt-order"><p class="eyebrow">TVŮJ MOTIV · ČERNÉ TRIČKO</p><h3>${generated.name}</h3><p>Ukázka potisku na hrudi. Objednávka otevře předobjednávkový prototyp e-shopu.</p><a class="primary-button" href="../at-shop-preview/product.html?id=tee-men">OBJEDNAT TRIČKO <span><svg class="line-arrow" viewBox="0 0 18 18" aria-hidden="true"><path d="M4 14 14 4M6 4h8v8"/></svg></span></a></div></div>`;
   } else {
     const discountCode = 'CREATURE10';
     const qrTarget = `https://shop.atariterror.com/?coupon=${discountCode}`;

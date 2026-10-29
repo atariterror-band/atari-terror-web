@@ -36,6 +36,7 @@ h1, h2, h3 { font-weight: 700; }
   background: var(--gold);
 }
 .topbar {
+  width: min(1200px, calc(100% - 48px));
   min-height: 64px;
   display: flex;
   align-items: center;
@@ -50,6 +51,8 @@ h1, h2, h3 { font-weight: 700; }
 .facebook-link svg { fill: currentColor; stroke: none; }
 .spotify-link svg { width: 32px; height: 32px; stroke-width: 1.8; }
 .youtube-link .youtube-play { fill: currentColor; stroke: none; }
+.header-shop { position: absolute; top: 50%; right: 0; transform: translateY(-50%); color: var(--ink); font-size: 14px; font-weight: 800; text-decoration: none; white-space: nowrap; }
+.header-shop:hover { color: var(--ink); }
 .hero-inner { display: flex; flex-direction: column; align-items: center; padding: clamp(24px, 3vw, 44px) 20px clamp(42px, 5vw, 68px); text-align: center; }
 .brand {
   margin: 0;
@@ -64,7 +67,11 @@ h1, h2, h3 { font-weight: 700; }
 .carousel-viewport { overflow: hidden; border-radius: 18px; background: transparent; }
 .carousel-track { display: flex; align-items: stretch; transition: transform 650ms cubic-bezier(.2,.7,.2,1); will-change: transform; }
 .carousel-slide { position: relative; display: grid; flex: 0 0 100%; min-height: clamp(261px, 22.5vw, 333px); overflow: hidden; }
-.clawfinger-slide { grid-template-columns: 1fr 1fr; align-items: stretch; background: #05070b; color: #fff; }
+.hentai-slide { display: block; height: clamp(261px, 22.5vw, 333px); background: #f4efe4; color: #000; text-decoration: none; }
+.hentai-art { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+.hentai-slide-copy { position: absolute; top: clamp(6px, 1.5vw, 12px); left: 0; width: 63%; color: var(--red); text-align: center; pointer-events: none; }
+.hentai-slide-copy h2 { margin: 0 0 3px; font-size: clamp(13px, 1.5vw, 20px); font-weight: 700; line-height: 1.1; }
+.hentai-slide-copy p { margin: 0; font-size: clamp(9px, 1.05vw, 14px); font-weight: 500; line-height: 1.2; }
 .slide-copy { position: relative; z-index: 1; align-self: center; padding: clamp(25px, 3.8vw, 58px); }
 .event-date { margin: 0 0 clamp(13px, 1.8vw, 25px); font-size: clamp(20px, 2.16vw, 32px); font-weight: 500; letter-spacing: .015em; }
 .event-copy h2 { margin: 0; font-size: clamp(27px, 3.51vw, 52px); font-weight: 700; letter-spacing: -.035em; line-height: 1.08; }
@@ -91,6 +98,19 @@ h1, h2, h3 { font-weight: 700; }
 .stripe-kicker { margin: 0 0 18px; text-transform: uppercase; font-size: 12px; font-weight: 800; letter-spacing: .16em; }
 .album-copy h2 { max-width: 680px; margin: 0; font-size: clamp(27px, 3.15vw, 45px); font-weight: 800; letter-spacing: -.055em; line-height: .98; }
 .album-copy > p:last-child { margin: 18px 0 0; font-size: clamp(18px, 2.25vw, 32px); letter-spacing: -.04em; line-height: 1.1; }
+.shop-slide { display: block; background: var(--gold); color: var(--ink); text-decoration: none; }
+.shop-art { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.shop-panel { position: absolute; inset: 0 0 0 52%; background: var(--gold); }
+.shop-copy { position: absolute; inset: 0 0 0 52%; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: clamp(16px, 2.4vw, 32px); color: var(--ink); }
+.shop-copy-main { min-width: 0; }
+.shop-kicker { margin: 0 0 7px; font-size: clamp(10px, 1.1vw, 14px); font-weight: 800; letter-spacing: .12em; }
+.shop-copy-main h2 { margin: 0; color: var(--red); font-size: clamp(28px, 3.6vw, 48px); font-weight: 800; letter-spacing: -.045em; line-height: .98; }
+.shop-copy-main > p:not(.shop-kicker) { margin: 8px 0 0; font-size: clamp(12px, 1.35vw, 18px); line-height: 1.15; }
+.shop-cta { display: inline-block; margin-top: 12px; padding: 8px 11px; background: var(--ink); color: var(--gold); font-size: clamp(8px, .95vw, 12px); font-weight: 800; letter-spacing: .06em; }
+.shop-slide:hover .shop-cta { background: var(--red); color: var(--ink); }
+.shop-badge { display: flex; flex: 0 0 auto; width: clamp(82px, 10vw, 128px); aspect-ratio: 1; flex-direction: column; align-items: center; justify-content: center; margin: 0; border-radius: 50%; background: var(--red); color: #fff; text-align: center; line-height: 1.05; }
+.shop-badge span { font-size: clamp(8px, .95vw, 12px); font-weight: 700; text-transform: uppercase; }
+.shop-badge strong { margin: 4px 0; color: var(--gold); font-size: clamp(10px, 1.3vw, 16px); font-weight: 900; text-transform: uppercase; }
 .carousel-controls { display: flex; align-items: center; justify-content: flex-end; gap: 12px; min-height: 48px; padding-top: 12px; }
 .carousel-controls button { color: var(--ink); background: transparent; border: 0; font: inherit; cursor: pointer; }
 .carousel-controls button:hover { color: var(--red); }
@@ -100,6 +120,70 @@ h1, h2, h3 { font-weight: 700; }
 .carousel-pagination { display: flex; align-items: center; gap: 8px; }
 .carousel-dot { width: 8px; height: 8px; padding: 0; border-radius: 50%; background: rgba(0,0,0,.38) !important; }
 .carousel-dot.is-active { width: 20px; border-radius: 8px; background: var(--red) !important; }
+
+.band-gallery {
+  width: min(1200px, calc(100% - 48px));
+  margin: 0 auto clamp(34px, 4vw, 54px);
+  overflow: hidden;
+}
+.band-gallery-viewport { overflow: hidden; }
+.band-gallery-track {
+  display: flex;
+  width: max-content;
+  gap: 14px;
+  animation: band-photo-drift 42s linear infinite;
+  will-change: transform;
+}
+.band-gallery:hover .band-gallery-track,
+.band-gallery:focus-within .band-gallery-track { animation-play-state: paused; }
+.band-photo {
+  display: block;
+  flex: 0 0 auto;
+  width: clamp(190px, 21vw, 260px);
+  height: clamp(126px, 14.7vw, 174px);
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  color: inherit;
+}
+button.band-photo { cursor: zoom-in; }
+.band-photo img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform 220ms ease; }
+button.band-photo:hover img { transform: scale(1.04); }
+.band-photo:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+@keyframes band-photo-drift { to { transform: translateX(-50%); } }
+.photo-lightbox {
+  width: min(96vw, 1440px);
+  max-width: none;
+  max-height: 96vh;
+  padding: 12px;
+  overflow: hidden;
+  border: 0;
+  border-radius: 8px;
+  background: #000;
+  color: #fff;
+}
+.photo-lightbox::backdrop { background: rgba(0, 0, 0, .9); }
+.lightbox-toolbar { position: relative; z-index: 1; display: flex; justify-content: flex-end; gap: 8px; padding-bottom: 8px; }
+.lightbox-toolbar button {
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border: 1px solid rgba(255,255,255,.55);
+  border-radius: 50%;
+  background: transparent;
+  color: #fff;
+  font: 500 28px/1 "Zalando Sans Expanded", sans-serif;
+  cursor: pointer;
+}
+.lightbox-toolbar button:last-child { margin-left: 8px; font-size: 30px; }
+.lightbox-toolbar button:hover { background: var(--red); border-color: var(--red); }
+.lightbox-image-wrap { display: grid; max-height: calc(96vh - 78px); place-items: center; overflow: auto; }
+.lightbox-photo-frame { position: relative; justify-self: center; align-self: center; width: max-content; max-width: 100%; margin: 0; }
+.lightbox-image-wrap img { display: block; max-width: 100%; max-height: calc(96vh - 78px); object-fit: contain; transform: scale(1); transition: transform 180ms ease; transform-origin: center; }
+.lightbox-photo-credit { position: absolute; left: 12px; bottom: 12px; z-index: 1; padding: 4px 7px; background: rgba(0,0,0,.56); color: #fff; font-size: 12px; font-weight: 500; line-height: 1.2; letter-spacing: .01em; pointer-events: none; }
 
 .gigs { padding: 0 24px 110px; background: var(--gold); }
 .gigs-inner { width: min(1200px, 100%); margin-inline: auto; }
@@ -119,6 +203,7 @@ h1, h2, h3 { font-weight: 700; }
 .footer-brand span { margin-left: 7px; font-weight: 400; }
 .footer-line { width: 1px; height: 18px; background: rgba(0,0,0,.35); }
 .footer-socials { margin-left: auto; display: flex; gap: 18px; text-transform: uppercase; font-weight: 800; letter-spacing: .08em; }
+.footer-socials .footer-shop-link { color: var(--ink); text-transform: none; }
 
 @media (max-width: 850px) {
   :root {
@@ -126,10 +211,13 @@ h1, h2, h3 { font-weight: 700; }
     --section-space: 40px;
     --artwork-blank-edge: clamp(20px, calc(4.6vw - 4px), 35px);
   }
-  .topbar { min-height: 82px; }
+  .topbar { width: min(1200px, calc(100% - var(--gutter) - var(--gutter))); min-height: 82px; }
   .hero-inner { padding: var(--section-space) 18px clamp(28px, 5vw, 46px); }
   .carousel-section { padding-inline: var(--gutter); }
   .carousel-slide { min-height: clamp(243px, 36vw, 306px); }
+  .hentai-slide, .shop-slide { height: auto; min-height: 0; aspect-ratio: 1200 / 333; }
+  .shop-copy { gap: 10px; padding: 12px; }
+  .shop-badge { width: clamp(64px, 12vw, 90px); }
   .gigs { padding: 0 var(--gutter) 110px; }
 }
 @media (max-width: 560px) {
@@ -147,8 +235,18 @@ h1, h2, h3 { font-weight: 700; }
   .carousel-slide { min-height: 0; }
   .carousel-viewport { border: 0; outline: 0; box-shadow: none; border-radius: 14px; }
   .carousel-track, .carousel-slide { border: 0; outline: 0; box-shadow: none; }
-  .clawfinger-slide, .album-slide { grid-template-columns: 1fr; grid-template-rows: 171px auto; }
-  .clawfinger-art { position: relative; inset: auto; grid-row: 1; width: 100%; min-height: 171px; background-image: linear-gradient(90deg, #05070b 0%, #05070b 29%, rgba(5,7,11,.72) 33%, transparent 39%), url("assets/images/clawfinger-before-we-all-die.png"); background-size: 100% 100%, auto 100%; background-position: right center; }
+  .hentai-slide-copy { top: 1px; width: 63%; }
+  .hentai-slide-copy h2 { margin-bottom: 1px; font-size: 7.5px; line-height: 1.05; }
+  .hentai-slide-copy p { font-size: 5.5px; line-height: 1.1; }
+  .shop-copy { gap: 5px; padding: 6px; }
+  .shop-kicker { margin-bottom: 3px; font-size: 6px; letter-spacing: .04em; }
+  .shop-copy-main h2 { font-size: clamp(13px, 4vw, 16px); }
+  .shop-copy-main > p:not(.shop-kicker) { margin-top: 3px; font-size: 7px; }
+  .shop-cta { margin-top: 4px; padding: 4px 5px; font-size: 5.5px; letter-spacing: 0; }
+  .shop-badge { width: 48px; }
+  .shop-badge span { font-size: 5.5px; }
+  .shop-badge strong { margin: 2px 0; font-size: 7px; }
+  .album-slide { grid-template-columns: 1fr; grid-template-rows: 171px auto; }
   .slide-copy { grid-row: 2; padding: 22px 20px 26px; }
   .slide-copy { padding: 20px 20px 24px; }
   .event-date { margin-bottom: 11px; font-size: 18px; }
@@ -163,6 +261,12 @@ h1, h2, h3 { font-weight: 700; }
   .album-copy > p:last-child { margin-top: 9px; font-size: clamp(16px, 4.5vw, 22px); }
   .carousel-controls { justify-content: center; min-height: 30px; padding-top: 4px; }
   .carousel-section { padding-bottom: 12px; }
+  .band-gallery { width: calc(100% - var(--gutter) * 2); margin-bottom: 24px; }
+  .band-gallery-track { gap: 10px; animation-duration: 32s; }
+  .band-photo { width: 190px; height: 126px; border-radius: 6px; }
+  .photo-lightbox { width: 100vw; max-height: 100dvh; padding: 10px; border-radius: 0; }
+  .lightbox-image-wrap, .lightbox-photo-frame, .lightbox-image-wrap img { max-height: calc(100dvh - 74px); }
+  .lightbox-photo-credit { left: 8px; bottom: 8px; font-size: 10px; }
   .gigs { padding: 5px var(--gutter) 60px; }
   .gigs-inner { width: 100%; }
   .gigs-heading { margin-bottom: 20px; }
@@ -176,5 +280,12 @@ h1, h2, h3 { font-weight: 700; }
   .footer-brand { font-size: 8px; }
   .footer-brand span { margin-left: 4px; }
   .footer-line { height: 20px; }
-  .footer-socials { gap: 9px; letter-spacing: .035em; }
+  .site-footer { flex-wrap: wrap; justify-content: space-between; padding-block: 12px; row-gap: 10px; }
+  .footer-socials { width: 100%; margin-left: 0; justify-content: space-between; flex-wrap: wrap; gap: 9px; letter-spacing: .035em; }
+  .header-shop { font-size: 11px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .band-gallery-track { animation: none; }
+  .band-photo img, .lightbox-image-wrap img { transition: none; }
 }

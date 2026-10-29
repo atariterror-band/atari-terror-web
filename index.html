@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Zalando+Sans+Expanded:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=carousel-clean-20261007">
+  <link rel="stylesheet" href="styles.css?v=at-shop-carousel-align-20261029">
 </head>
 <body>
   <main>
@@ -32,6 +32,7 @@
           <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path class="youtube-play" d="M10 8.5v7l6-3.5z"/></svg>
         </a>
       </nav>
+      <a class="header-shop" href="https://shop.atariterror.com" target="_blank" rel="noopener noreferrer">AT Shop</a>
     </header>
 
     <section class="hero" id="hero" aria-labelledby="hero-title">
@@ -44,38 +45,89 @@
       <div class="carousel page-width" data-carousel aria-roledescription="carousel">
         <div class="carousel-viewport">
           <div class="carousel-track">
-            <article class="carousel-slide clawfinger-slide" aria-roledescription="slide" aria-label="1 z 2: Clawfinger, Atari Terror a Sickret">
-              <div class="slide-copy event-copy">
-                <p class="event-date">24/10/2026</p>
-                <h2><span class="act-headliner">Clawfinger</span><span class="act-support">Atari Terror</span><span class="act-support act-secondary">Sickret</span></h2>
-                <p class="event-venue">Praha, SaSaZu Holešovice</p>
+            <a class="carousel-slide shop-slide" href="https://shop.atariterror.com" target="_blank" rel="noopener noreferrer" role="group" aria-roledescription="slide" aria-label="1 z 2: Believer — předprodej alba v Atari Terror shopu">
+              <img class="shop-art" src="assets/images/believer-shop-carousel.png" alt="Obal alba Believer, žlutý vnitřní obal a zelená vinylová deska">
+              <div class="shop-panel" aria-hidden="true"></div>
+              <div class="shop-copy">
+                <div class="shop-copy-main">
+                  <p class="shop-kicker">NOVÁ DESKA · Q1 2027</p>
+                  <h2>BELIEVER</h2>
+                  <p>Předprodej alba spuštěn!</p>
+                  <span class="shop-cta">SHOP.ATARITERROR.COM ↗</span>
+                </div>
+                <p class="shop-badge"><span>Nová deska</span><strong>Believer</strong><span>Q1 2027</span></p>
               </div>
-              <div class="clawfinger-art" role="img" aria-label="Grafika Clawfinger — Before We All Die"></div>
-            </article>
+            </a>
 
-            <article class="carousel-slide album-slide" aria-roledescription="slide" aria-label="2 z 2: Nová deska">
-              <figure class="album-art">
-                <img src="assets/images/believer-lp.jpeg" alt="Vinylové vydání Believer: obal Atari Terror a zelená gramofonová deska">
-              </figure>
-              <div class="slide-copy album-copy">
-                <p class="stripe-kicker">Atari Terror · 2026</p>
-                <h2>NEW ALBUM STATUS</h2>
-                <p>Working in Studiooo</p>
+            <a class="carousel-slide hentai-slide" href="#gigs" role="group" aria-roledescription="slide" aria-label="2 z 2: Hentai Corporation a Atari Terror — zobrazit termíny Shirimming Tour 2026">
+              <img class="hentai-art" src="hentai-corporation-carousel.png" alt="Hentai Corporation a Atari Terror, ilustrace se zlatým okem">
+              <div class="hentai-slide-copy">
+                <h2>Listopad-Prosinec</h2>
+                <p>Termíny koncertů v rámci Shirimming Tour 2026 najdeš níže na webu</p>
               </div>
-            </article>
+            </a>
           </div>
         </div>
 
         <div class="carousel-controls" aria-label="Ovládání carouselu">
           <div class="carousel-pagination" role="group" aria-label="Vybrat položku carouselu">
-            <button class="carousel-dot is-active" type="button" data-slide-to="0" aria-label="Zobrazit koncert Clawfinger" aria-current="true"></button>
-            <button class="carousel-dot" type="button" data-slide-to="1" aria-label="Zobrazit novou desku" aria-current="false"></button>
+            <button class="carousel-dot is-active" type="button" data-slide-to="0" aria-label="Zobrazit předprodej alba Believer" aria-current="true"></button>
+            <button class="carousel-dot" type="button" data-slide-to="1" aria-label="Zobrazit Shirimming Tour 2026" aria-current="false"></button>
           </div>
           <button class="carousel-toggle" type="button" data-toggle aria-label="Pozastavit automatický posun">Ⅱ</button>
           <button class="carousel-arrow" type="button" data-next aria-label="Další položka">→</button>
         </div>
       </div>
     </section>
+
+    <section class="band-gallery" aria-label="Fotografie Atari Terror">
+      <div class="band-gallery-viewport">
+        <div class="band-gallery-track">
+          <button class="band-photo" type="button" data-photo-open aria-label="Zvětšit fotografii Atari Terror">
+            <img src="assets/band/band.jpg" alt="Atari Terror — kapelní fotografie">
+          </button>
+          <button class="band-photo" type="button" data-photo-open aria-label="Zvětšit fotografii Broni">
+            <img src="assets/band/brona.jpg" alt="Brona — portrét">
+          </button>
+          <button class="band-photo" type="button" data-photo-open aria-label="Zvětšit fotografii kapely">
+            <img src="assets/band/band2.jpg" alt="Atari Terror — kapelní fotografie">
+          </button>
+          <button class="band-photo" type="button" data-photo-open aria-label="Zvětšit fotografii Kurze">
+            <img src="assets/band/kurz.jpg" alt="Kurz — portrét">
+          </button>
+          <button class="band-photo" type="button" data-photo-open aria-label="Zvětšit fotografii Nuneze">
+            <img src="assets/band/Nunez.jpg" alt="Nunez — portrét">
+          </button>
+          <button class="band-photo" type="button" data-photo-open aria-label="Zvětšit fotografii Ps">
+            <img src="assets/band/ps.jpg" alt="Ps — portrét">
+          </button>
+          <button class="band-photo" type="button" data-photo-open aria-label="Zvětšit fotografii Sk">
+            <img src="assets/band/sk.jpg" alt="Sk — portrét">
+          </button>
+          <span class="band-photo" aria-hidden="true"><img src="assets/band/band.jpg" alt=""></span>
+          <span class="band-photo" aria-hidden="true"><img src="assets/band/brona.jpg" alt=""></span>
+          <span class="band-photo" aria-hidden="true"><img src="assets/band/band2.jpg" alt=""></span>
+          <span class="band-photo" aria-hidden="true"><img src="assets/band/kurz.jpg" alt=""></span>
+          <span class="band-photo" aria-hidden="true"><img src="assets/band/Nunez.jpg" alt=""></span>
+          <span class="band-photo" aria-hidden="true"><img src="assets/band/ps.jpg" alt=""></span>
+          <span class="band-photo" aria-hidden="true"><img src="assets/band/sk.jpg" alt=""></span>
+        </div>
+      </div>
+    </section>
+
+    <dialog class="photo-lightbox" data-photo-lightbox aria-label="Fotografie Atari Terror">
+      <div class="lightbox-toolbar">
+        <button type="button" data-zoom-out aria-label="Zmenšit fotografii">−</button>
+        <button type="button" data-zoom-in aria-label="Zvětšit fotografii">+</button>
+        <button type="button" data-photo-close aria-label="Zavřít fotografii">×</button>
+      </div>
+      <div class="lightbox-image-wrap">
+        <figure class="lightbox-photo-frame">
+          <img data-photo-full alt="">
+          <figcaption class="lightbox-photo-credit">Photo by Tomáš Třeštík</figcaption>
+        </figure>
+      </div>
+    </dialog>
 
     <section class="gigs" id="gigs" aria-labelledby="gigs-title">
       <div class="gigs-inner">
@@ -84,7 +136,6 @@
         </div>
 
         <div class="gig-list" role="list" aria-label="Koncerty Atari Terror">
-          <article class="gig" role="listitem"><time datetime="2026-10-24">24.10.2026</time><strong>Praha</strong><span>Clawfinger · SaSaZu</span><span class="gig-arrow" aria-hidden="true">↗</span></article>
           <article class="gig" role="listitem"><time datetime="2026-11-07">07.11.2026</time><strong>Jablonec nad Nisou</strong><span>Hentai Corporation · Klub Stage</span><span class="gig-arrow" aria-hidden="true">↗</span></article>
           <article class="gig" role="listitem"><time datetime="2026-11-14">14.11.2026</time><strong>České Budějovice</strong><span>Hentai Corporation · MC Fabrika</span><span class="gig-arrow" aria-hidden="true">↗</span></article>
           <article class="gig" role="listitem"><time datetime="2026-11-20">20.11.2026</time><strong>Mladá Boleslav</strong><span>Hentai Corporation · Malý sál DK</span><span class="gig-arrow" aria-hidden="true">↗</span></article>
@@ -99,10 +150,11 @@
       <a href="#hero" class="footer-brand">ATARI TERROR <span>© 2026</span></a>
       <span class="footer-line" aria-hidden="true"></span>
       <a href="#gigs">Koncerty <span aria-hidden="true">↑</span></a>
-      <div class="footer-socials"><a href="https://www.instagram.com/atari_terror_oficialni/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://www.facebook.com/atariterror/" target="_blank" rel="noopener noreferrer">Facebook</a><a href="https://open.spotify.com/artist/7tuvvz0x2oNyY8JTXRcqmp" target="_blank" rel="noopener noreferrer">Spotify</a><a href="https://youtube.com/@atariterror?si=dNAEgjpK61GHGB8R" target="_blank" rel="noopener noreferrer">YouTube</a></div>
+      <div class="footer-socials"><a href="https://www.instagram.com/atari_terror_oficialni/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://www.facebook.com/atariterror/" target="_blank" rel="noopener noreferrer">Facebook</a><a href="https://open.spotify.com/artist/7tuvvz0x2oNyY8JTXRcqmp" target="_blank" rel="noopener noreferrer">Spotify</a><a href="https://youtube.com/@atariterror?si=dNAEgjpK61GHGB8R" target="_blank" rel="noopener noreferrer">YouTube</a><a class="footer-shop-link" href="https://shop.atariterror.com" target="_blank" rel="noopener noreferrer">AT Shop</a></div>
     </footer>
   </main>
   <script src="carousel.js?v=carousel-clean-20261007" defer></script>
+  <script src="gallery.js?v=gallery-20261029" defer></script>
   <!-- Cloudflare Web Analytics -->
   <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "0fa20d6bd1d849b080b5f285471af608"}'></script>
   <!-- End Cloudflare Web Analytics -->

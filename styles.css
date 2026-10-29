@@ -64,7 +64,7 @@ h1, h2, h3 { font-weight: 700; }
 .carousel-section { padding: 0 24px clamp(42px, 5vw, 74px); }
 .carousel { width: min(1200px, 100%); margin-inline: auto; }
 .carousel, .carousel-viewport, .carousel-track, .carousel-slide { border: 0 !important; outline: 0 !important; box-shadow: none !important; filter: none !important; }
-.carousel-viewport { overflow: hidden; aspect-ratio: 3 / 1; border-radius: 18px; background: transparent; }
+.carousel-viewport { height: min(33.333vw, 400px); overflow: hidden; border-radius: 18px; background: transparent; }
 .carousel-track { display: flex; align-items: stretch; height: 100%; transition: transform 650ms cubic-bezier(.2,.7,.2,1); will-change: transform; }
 .carousel-slide { position: relative; display: grid; flex: 0 0 100%; height: 100%; min-height: 0; overflow: hidden; }
 .hentai-slide { display: block; background: #f4efe4; color: #000; text-decoration: none; }
@@ -214,6 +214,7 @@ button.band-photo:hover img { transform: scale(1.04); }
   .topbar { width: min(1200px, calc(100% - var(--gutter) - var(--gutter))); min-height: 82px; }
   .hero-inner { padding: var(--section-space) 18px clamp(28px, 5vw, 46px); }
   .carousel-section { padding-inline: var(--gutter); }
+  .carousel-viewport { height: calc(33.333vw - 18.667px); }
   .carousel-slide { min-height: 0; }
   .hentai-slide, .shop-slide { height: 100%; }
   .shop-copy { gap: 10px; padding: 12px; }
@@ -232,6 +233,7 @@ button.band-photo:hover img { transform: scale(1.04); }
   .spotify-link svg { width: 31px; height: 31px; }
   .hero-inner { padding: var(--section-space) 14px 28px; }
   .carousel-section { padding: 0 var(--gutter) 34px; }
+  .carousel-viewport { height: calc(33.333vw - 13.333px); }
   .carousel-slide { min-height: 0; }
   .carousel-viewport { border: 0; outline: 0; box-shadow: none; border-radius: 14px; }
   .carousel-track, .carousel-slide { border: 0; outline: 0; box-shadow: none; }

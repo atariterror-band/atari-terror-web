@@ -64,11 +64,11 @@ h1, h2, h3 { font-weight: 700; }
 .carousel-section { padding: 0 24px clamp(42px, 5vw, 74px); }
 .carousel { width: min(1200px, 100%); margin-inline: auto; }
 .carousel, .carousel-viewport, .carousel-track, .carousel-slide { border: 0 !important; outline: 0 !important; box-shadow: none !important; filter: none !important; }
-.carousel-viewport { overflow: hidden; border-radius: 18px; background: transparent; }
-.carousel-track { display: flex; align-items: stretch; transition: transform 650ms cubic-bezier(.2,.7,.2,1); will-change: transform; }
-.carousel-slide { position: relative; display: grid; flex: 0 0 100%; min-height: clamp(261px, 22.5vw, 333px); overflow: hidden; }
-.hentai-slide { display: block; height: clamp(261px, 22.5vw, 333px); background: #f4efe4; color: #000; text-decoration: none; }
-.hentai-art { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+.carousel-viewport { overflow: hidden; aspect-ratio: 3 / 1; border-radius: 18px; background: transparent; }
+.carousel-track { display: flex; align-items: stretch; height: 100%; transition: transform 650ms cubic-bezier(.2,.7,.2,1); will-change: transform; }
+.carousel-slide { position: relative; display: grid; flex: 0 0 100%; height: 100%; min-height: 0; overflow: hidden; }
+.hentai-slide { display: block; background: #f4efe4; color: #000; text-decoration: none; }
+.hentai-art { display: block; width: 100%; height: 100%; object-fit: contain; object-position: center top; }
 .hentai-slide-copy { position: absolute; top: clamp(6px, 1.5vw, 12px); left: 0; width: 63%; color: var(--red); text-align: center; pointer-events: none; }
 .hentai-slide-copy h2 { margin: 0 0 3px; font-size: clamp(13px, 1.5vw, 20px); font-weight: 700; line-height: 1.1; }
 .hentai-slide-copy p { margin: 0; font-size: clamp(9px, 1.05vw, 14px); font-weight: 500; line-height: 1.2; }
@@ -214,8 +214,8 @@ button.band-photo:hover img { transform: scale(1.04); }
   .topbar { width: min(1200px, calc(100% - var(--gutter) - var(--gutter))); min-height: 82px; }
   .hero-inner { padding: var(--section-space) 18px clamp(28px, 5vw, 46px); }
   .carousel-section { padding-inline: var(--gutter); }
-  .carousel-slide { min-height: clamp(243px, 36vw, 306px); }
-  .hentai-slide, .shop-slide { height: auto; min-height: 0; aspect-ratio: 1200 / 333; }
+  .carousel-slide { min-height: 0; }
+  .hentai-slide, .shop-slide { height: 100%; }
   .shop-copy { gap: 10px; padding: 12px; }
   .shop-badge { width: clamp(64px, 12vw, 90px); }
   .gigs { padding: 0 var(--gutter) 110px; }

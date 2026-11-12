@@ -342,6 +342,7 @@ button.band-photo:hover img { transform: scale(1.04); }
   column-gap: 14px;
 }
 .gig-ticket {
+  justify-self: end;
   display: inline-flex;
   min-width: 88px;
   min-height: 40px;
@@ -360,5 +361,5 @@ button.band-photo:hover img { transform: scale(1.04); }
 
 @media (max-width: 560px) {
   .gig { min-height: 116px; grid-template-rows: auto auto auto auto; }
-  .gig-ticket { grid-column: 1; grid-row: 4; justify-self: start; min-height: 38px; margin-top: 3px; }
+  .gig-ticket { grid-column: 1; grid-row: 4; justify-self: end; min-height: 38px; margin-top: 3px; }
 }

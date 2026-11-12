@@ -196,7 +196,7 @@ button.band-photo:hover img { transform: scale(1.04); }
 .gigs-heading { margin: 0 0 46px; }
 .gigs h2 { margin: 0; font-size: clamp(32px, 3.2vw, 44px); font-weight: 800; letter-spacing: .015em; line-height: 1; }
 .gig-list { border-top: 0; }
-.gig { min-height: 74px; display: grid; grid-template-columns: 22% 37% 41%; align-items: center; border-bottom: 1px solid rgba(0,0,0,.38); }
+.gig { min-height: 74px; display: grid; grid-template-columns: 20% 28% minmax(0, 1fr) auto; column-gap: 14px; align-items: center; border-bottom: 1px solid rgba(0,0,0,.38); }
 .gig time { font-variant-numeric: tabular-nums; font-size: 14px; letter-spacing: .025em; }
 .gig strong { font-size: 15px; font-weight: 800; text-transform: uppercase; }
 .gig > span { font-size: 14px; }
@@ -337,10 +337,6 @@ button.band-photo:hover img { transform: scale(1.04); }
 }
 
 /* Ticket links in the gigs list */
-.gig {
-  grid-template-columns: 20% 28% minmax(0, 1fr) auto;
-  column-gap: 14px;
-}
 .gig-ticket {
   justify-self: end;
   display: inline-flex;
